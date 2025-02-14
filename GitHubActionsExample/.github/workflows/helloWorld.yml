@@ -1,0 +1,11 @@
+name: Hello, World
+ 
+# Controls when the workflow will run, in this case manually
+on: workflow_dispatch
+
+jobs:
+  PrintHelloWorld:
+    name: Print Hello, World!
+    runs-on: ubuntu-latest
+    steps: 
+    - run: echo "Hello, World!"

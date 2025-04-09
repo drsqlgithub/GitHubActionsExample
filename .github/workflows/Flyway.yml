@@ -1,5 +1,5 @@
 name: Install Flyway
-on: workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   Install:

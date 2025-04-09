@@ -1,12 +1,13 @@
 name: Install Flyway
-	on: 
-	  workflow_dispatch:
-	jobs:
-	  Install:
-	    name: Install Flyway
-	    runs-on: ubuntu-latest
-	    steps:
-	      - name: Install
-	        run: wget -qO- https://download.red-gate.com/maven/release/com/redgate/flyway/flyway-commandline/11.1.1/flyway-commandline-11.1.1-linux-x64.tar.gz | tar -xvz && sudo ln -s `pwd`/flyway-11.1.1/flyway /usr/local/bin 
-	      - name: Check Install
-	        run: flyway --version
+on: 
+  workflow_dispatch:
+
+jobs:
+  Install:
+    name: Install Flyway
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install
+        run: wget -qO- https://download.red-gate.com/maven/release/com/redgate/flyway/flyway-commandline/11.1.1/flyway-commandline-11.1.1-linux-x64.tar.gz | tar -xvz && sudo ln -s `pwd`/flyway-11.1.1/flyway /usr/local/bin 
+      - name: Check Install
+        run: flyway --version

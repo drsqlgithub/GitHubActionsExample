@@ -1,6 +1,5 @@
 name: Run Flyway on Docker
-on: 
-  workflow_dispatch:
+on:   workflow_dispatch
 
 jobs:
   runFlyway:
@@ -9,4 +8,4 @@ jobs:
     container: flyway/flyway
     steps:
     - name: runFlyway
-      run: flyway –version
+      run: flyway --version
